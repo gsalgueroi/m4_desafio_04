@@ -1,0 +1,131 @@
+* {
+    font-size: 16px;
+    box-sizing: border-box;
+    color: black;
+}
+
+body {
+    
+    
+    font-family: 'Open Sans', sans-serif;
+    padding: 0px;
+    margin: 0px;
+    color: white;
+}
+
+.content {
+    overflow-x: hidden;
+    overflow-y: auto;
+    text-align: center;
+    
+    grid-area: content;
+    background-image: url('../../assets/img/bgs/bg_item.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.header {
+    font-size: 1.5rem;font-weight: bold;
+    grid-area: header;
+    background-image: url('../../assets/img/bgs/bg_item.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.footer {
+    font-size: 1.5rem;font-weight: bold;
+    grid-area: footer;
+    background-image: url('../../assets/img/bgs/bg_item.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main_grid {
+    
+    height:100%; 
+    width:100%;
+    background-color:black;
+    margin: 0px 0 0 0;
+
+    padding: 10px;
+    height: 100vh;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 12fr 1fr;
+    grid-template-areas:
+        "header"
+        "content"
+        "footer"
+    ;    
+}
+
+@media screen and (min-width: 550px) {
+    .main_grid {
+        height: 100vh;
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 12fr 1fr;
+        grid-template-areas:
+            "header"
+            "content"
+            "footer"
+        ;
+    }
+}
+
+.box_center {
+    border: 10px solid;
+    border-image: url('../../assets/img/bgs/borde.png') 50 round;
+    border: 2px solid;
+    background-color: #444;
+    color: black;
+    padding: 10px;
+    text-align: center;
+}
+
+.box {
+    border: 10px solid transparent;
+    border-image: url('../../assets/img/bgs/borde.png') 50 round;
+    background-color: #444;
+    color: black;
+    padding: 10px;
+}
+
+.display_flex_row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.display_grid_row_4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+}
+
+.content > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.div_img_card{
+    height:180px;
+    width: 100%; 
+    background-size: cover; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+}
